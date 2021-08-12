@@ -10,5 +10,5 @@ class IndexView(View):
 
 
 class Index(View):
-    def calc(self, request, *args, **kwargs):
-        return
+    def get(self, request, a, b, *args, **kwargs):
+        return render(request, 'index.html', context={'result': a + b, 'who': 'Ivan'})
