@@ -10,5 +10,12 @@ class IndexView(View):
 
 
 class Index(View):
+
     def get(self, request, a, b, *args, **kwargs):
-        return render(request, 'index.html', context={'result': a + b, 'who': 'Ivan'})
+        return render(request, 'calc/sum.html', context={'result': a + b, 'who': 'Ivan'})
+
+
+class History(View):
+
+    def get(self, request):
+        pass
